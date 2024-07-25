@@ -9,13 +9,19 @@ import { ClassicEditor as ClassicEditorBase } from '@ckeditor/ckeditor5-editor-c
 import { Essentials } from '@ckeditor/ckeditor5-essentials';
 import { CKFinderUploadAdapter } from '@ckeditor/ckeditor5-adapter-ckfinder';
 import { Autoformat } from '@ckeditor/ckeditor5-autoformat';
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
+import { Bold, Italic, Strikethrough, Underline } from '@ckeditor/ckeditor5-basic-styles';
 import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
 import { CKBox } from '@ckeditor/ckeditor5-ckbox';
 import { CKFinder } from '@ckeditor/ckeditor5-ckfinder';
 import { EasyImage } from '@ckeditor/ckeditor5-easy-image';
 import { Heading } from '@ckeditor/ckeditor5-heading';
+import { HorizontalLine } from '@ckeditor/ckeditor5-horizontal-line';
+import { SelectAll } from '@ckeditor/ckeditor5-select-all';
+import { FindAndReplace } from '@ckeditor/ckeditor5-find-and-replace';
+import { FontFamily, FontSize, FontBackgroundColor, FontColor } from '@ckeditor/ckeditor5-font';
+import { Alignment } from '@ckeditor/ckeditor5-alignment';
 import { Image, ImageCaption, ImageStyle, ImageToolbar, ImageUpload, PictureEditing } from '@ckeditor/ckeditor5-image';
+import { PageBreak } from '@ckeditor/ckeditor5-page-break';
 import { Indent } from '@ckeditor/ckeditor5-indent';
 import { Link } from '@ckeditor/ckeditor5-link';
 import { List } from '@ckeditor/ckeditor5-list';
@@ -33,18 +39,29 @@ export default class ClassicEditor extends ClassicEditorBase {
 		Autoformat,
 		Bold,
 		Italic,
+		Strikethrough,
+		Underline,
 		BlockQuote,
 		CKBox,
 		CKFinder,
 		CloudServices,
 		EasyImage,
 		Heading,
+		HorizontalLine,
+		SelectAll,
+		FindAndReplace,
+		FontFamily,
+		FontSize,
+		FontBackgroundColor,
+		FontColor,
+		Alignment,
 		Image,
 		ImageCaption,
 		ImageStyle,
 		ImageToolbar,
 		ImageUpload,
 		Indent,
+		PageBreak,
 		Link,
 		List,
 		MediaEmbed,
@@ -60,10 +77,14 @@ export default class ClassicEditor extends ClassicEditorBase {
 		toolbar: {
 			items: [
 				'undo', 'redo',
-				'|', 'heading',
-				'|', 'bold', 'italic',
+				'|', 'findAndReplace', 'selectAll',
 				'|', 'link', 'uploadImage', 'insertTable', 'blockQuote', 'mediaEmbed',
-				'|', 'bulletedList', 'numberedList', 'outdent', 'indent'
+				'|', 'bulletedList', 'numberedList', 'outdent', 'indent',
+				'|', 'pageBreak', 'horizontalLine',
+				'-', 'heading',
+				'|', 'alignment:left', 'alignment:right', 'alignment:center', 'alignment:justify',
+				'|', 'fontFamily', 'fontSize', 'fontBackgroundColor', 'fontColor',
+				'|', 'bold', 'italic', 'underline', 'strikethrough'
 			]
 		},
 		image: {
@@ -84,6 +105,6 @@ export default class ClassicEditor extends ClassicEditorBase {
 			]
 		},
 		// This value must be kept in sync with the language defined in webpack.config.js.
-		language: 'en'
+		language: 'zh-cn'
 	};
 }
