@@ -20,7 +20,7 @@ import { SelectAll } from '@ckeditor/ckeditor5-select-all';
 import { FindAndReplace } from '@ckeditor/ckeditor5-find-and-replace';
 import { FontFamily, FontSize, FontBackgroundColor, FontColor } from '@ckeditor/ckeditor5-font';
 import { Alignment } from '@ckeditor/ckeditor5-alignment';
-import { Image, ImageCaption, ImageStyle, ImageToolbar, ImageUpload, PictureEditing } from '@ckeditor/ckeditor5-image';
+import { Image, ImageCaption, ImageStyle, ImageToolbar, ImageUpload, PictureEditing, ImageResize } from '@ckeditor/ckeditor5-image';
 import { PageBreak } from '@ckeditor/ckeditor5-page-break';
 import { Indent } from '@ckeditor/ckeditor5-indent';
 import { Link } from '@ckeditor/ckeditor5-link';
@@ -60,6 +60,7 @@ export default class ClassicEditor extends ClassicEditorBase {
 		ImageStyle,
 		ImageToolbar,
 		ImageUpload,
+		ImageResize,
 		Indent,
 		PageBreak,
 		Link,
